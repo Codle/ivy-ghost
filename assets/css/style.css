@@ -308,6 +308,7 @@ html {
       margin-left: 10px;
       margin-right: 10px;
       border-bottom: 3px solid black;
+      position: fixed;
     }
   
     .main {
