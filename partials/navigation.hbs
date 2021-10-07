@@ -1,0 +1,12 @@
+<nav class="menu">
+  <input id="menu-check" type="checkbox" hidden />
+  <label id="menu-label" for="menu-check" class="unselectable" hidden>
+    <span class="icon close-icon">✕</span>
+    <span class="icon open-icon">☰</span>
+    <span class="text">Menu</span>
+  </label>
+  <!-- Loop through the navigation items -->
+  {{#foreach navigation}}
+  <li class="{{#if current}} active{{/if}}"><a href="{{url absolute=" true"}}">{{label}}</a></li>
+  {{/foreach}}
+</nav>

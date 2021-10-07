@@ -1,0 +1,23 @@
+
+{{!< default}} 
+
+{{!-- The tag above means: insert everything in this file into the {body} tag of the default.hbs template --}} 
+
+<main id="site-main" class="site-main outer">
+
+    {{#get "pages" filter="title:Home"}}
+        {{#foreach pages}}
+            {{content}}
+        {{/foreach}}
+    {{/get}}
+    
+    <h2>Posts</h2>
+    <ul>
+        {{#foreach posts }}
+        <li><span class="date">{{ date }}</span>
+            <a href="{{ url }}">{{ title }}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+    {{pagination}}
+</main>

@@ -1,0 +1,20 @@
+{{!< default}}
+
+{{!-- The tag above means: insert everything in this file
+into the {body} tag of the default.hbs template --}}
+
+
+{{#post}}
+{{!-- Everything inside the #post block pulls data from the post --}}
+    <header class="title">
+        <h1>{{ title }}</h1>
+        {{!-- <h1><span class="subtitle">{{ excerpt }}</span></h1> --}}
+        {{#primary_author}}
+        <h3>{{ name }} / {{date}}</h3>
+        {{/primary_author}}
+        
+        <hr>
+    </header>
+
+    {{ content }}
+{{/post}}
