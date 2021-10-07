@@ -24,14 +24,17 @@ Keep this template as lightweight as you can!
 
 {{!-- Given that people landing on this page didn't find what they
 were looking for, let's give them some alternative stuff to read. --}}
-<aside class="read-more-wrap">
-    <div class="read-more inner">
-        {{#get "posts" include="authors" limit="3" as |more_posts|}}
-            {{#if more_posts}}
-                {{#foreach more_posts}}
-                    {{> "post-card"}}
-                {{/foreach}}
-            {{/if}}
-        {{/get}}
-    </div>
-</aside>
+
+{{#get "posts" include="authors" limit="3" as |more_posts|}}
+    {{#if more_posts}}
+        <h2>Recent Posts</h2>
+    
+    <ul>
+        {{#foreach more_posts }}
+        <li><span class="date">{{ date format="YYYY-MM-DD"}}</span>
+            <a href="{{ url }}">{{ title }}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+    {{/if}}
+{{/get}}
