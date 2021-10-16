@@ -157,6 +157,7 @@ html {
     width: 260px;
     padding: 20px 50px 20px 10px;
     float: left;
+    position: fixed;
   }
   
   .main {
@@ -308,7 +309,7 @@ html {
       margin-left: 10px;
       margin-right: 10px;
       border-bottom: 3px solid black;
-      position: fixed;
+      position: relative;
     }
   
     .main {
