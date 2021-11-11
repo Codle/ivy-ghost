@@ -16,7 +16,7 @@
         {{#foreach posts }}
         <li>
             <span class="date">{{ date format="YYYY-MM-DD"}}</span>
-            <span>[{{tags separator=" ][ " autolink="false"}}]</span>
+            <span>[{{ tags separator=" ][ " }}]</span>
             <a href="{{ url }}">{{ title }}</a>
         </li>
         {{/foreach}}
