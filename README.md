@@ -1,9 +1,6 @@
 # Ivy-Ghost
 
-A ghost theme.
+A clean ghost theme.
 
-TODO:
 
-- Support comments.
-- 404 Page.
-- ...
+Demo: https://codle.net
